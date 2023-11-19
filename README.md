@@ -57,3 +57,10 @@
   - React(State)で入力を管理する方式のコンポーネントを制御コンポーネントと呼ぶ
   - もちろん個々の入力要素ごとにstateを管理することもできるが、要素の数だけstateを定義しないといけないため記述量が増えてしまう
 - JavaScriptのchangeイベントとReactのonChange属性は異なるもの
+- 入力値をstateで保持しないコンポーネントのことを非制御コンポーネントと呼ぶ
+  - stateを用いないため`<input>`や`<select>`の要素に直接アクセスする必要がある
+  - stateを使わないので再描画は発生しないが、リアルタイムな入力値検証やフォーム操作は苦手
+  - useRef関数は要素に紐づける場合は引数はnullとする`const name = useRef(null);`
+  - 実際にRefオブジェクトに要素を紐づけるのはref属性`input id="name" name="name" type="text" ref={name} defaultValue="佐藤大輔" />`
+  - 非制御コンポーネントはstateを使わないため、既定値は要素のdefaultValue属性として割り当てる
+  - value属性として割り当ててしまうと値はロックされてしまい、変更できなくなる
