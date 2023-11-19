@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import StateForm from './basicForm/StateForm';
 import StateFormUC from './basicForm/StateFormUC';
 import StateNest from './basicForm/StateNest';
+import StateNestImmer from './basicForm/StateNestImmer';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -13,7 +14,8 @@ root.render(
     {/* <App /> */}
     {/* <StateForm /> */}
     {/* <StateFormUC /> */}
-    <StateNest />
+    {/* <StateNest /> */}
+    <StateNestImmer />
   </React.StrictMode>
 );
 
