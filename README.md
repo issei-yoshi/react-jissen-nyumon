@@ -29,3 +29,24 @@
 - key属性があることでReactはリスト項目を特定することができる
   - key属性がない状態ではReactは配列の変更を検知できないため、変更/削除があった際にリスト全体を再生成しなければならない
   - map関数のindexを渡すことで一意なkeyになるので警告の抑制はできるが、要素の追加/削除・ソートによって変化する可能せがあるため望ましくない
+- `props.children`で親コンポーネントの子要素を取得することが可能
+  - childrenプロパティの実体はは以下のコンテンツを表すJSX要素の配列
+  - そのため親コンポーネントで特定のchildにkey属性を持たせていた場合は、子コンポーネントでfindメソッドで該当の要素を取り出すことも可能
+    - `const title = children.find((element) => element.key === 'title')`
+- Reactのイベント
+  - mouseenter/mouseleaveイベント →　対象となる要素の出入りに際してのみ発生
+  - mouseover/mouseoutイベント →　内側の要素に出入りした際にも発生
+  - ReactのイベントオブジェクトはJavaScriptと全く同じものというわけではなく、ブラウザ間の使用さを吸収したSyntheticEventgaseiseisareru
+  - イベントハンドラーに任意の引数を渡す際の手法
+    - 実行時に引数の値が変化するとき
+      - `<button onClick={e => func(e, 'hogehoge')}>date</button>`
+    - あらかじめ引数の値が決まるとき
+      - `<button data-type='hogehoge' onClick={func}>date</button>`
+      - 関数内では`e.target.dataset.type`で"hogehoge"を取得できる
+  - イベントの処理はイベントの発生元だけで実行されるわけではない
+    - 伝播の過程で対応するハンドラーが存在する場合（親要素等に同様のハンドラーがある場合）には、それらも順に実行される
+    - 処理の順序を変更することももちろんできる
+      - 通常は「孫→子→親」の順で伝播される
+      - `onClickCapture`などの`onXxxxCapture`を使うことで「親→子→孫」の順に伝播する
+      - そもそも伝播を抑制したい場合には呼び出される関数内で`e.stopPropagation()`を呼び出す
+      - クリックしたら別ページに遷移するなどのイベント既定の動作をキャンセルしたい場合には`e.preventDefault()`を使うことでキャンセル可能
