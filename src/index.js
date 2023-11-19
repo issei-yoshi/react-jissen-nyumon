@@ -7,6 +7,7 @@ import StateForm from './basicForm/StateForm';
 import StateFormUC from './basicForm/StateFormUC';
 import StateNest from './basicForm/StateNest';
 import StateNestImmer from './basicForm/StateNestImmer';
+import StateTodo from './basicForm/StateTodo';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -15,7 +16,8 @@ root.render(
     {/* <StateForm /> */}
     {/* <StateFormUC /> */}
     {/* <StateNest /> */}
-    <StateNestImmer />
+    {/* <StateNestImmer /> */}
+    <StateTodo />
   </React.StrictMode>
 );
 
