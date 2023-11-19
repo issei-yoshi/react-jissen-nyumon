@@ -5,13 +5,15 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import StateForm from './basicForm/StateForm';
 import StateFormUC from './basicForm/StateFormUC';
+import StateNest from './basicForm/StateNest';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     {/* <App /> */}
     {/* <StateForm /> */}
-    <StateFormUC />
+    {/* <StateFormUC /> */}
+    <StateNest />
   </React.StrictMode>
 );
 
