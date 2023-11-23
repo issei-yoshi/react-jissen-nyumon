@@ -99,3 +99,21 @@
     - 各Todoにidプロパティを割り当てておき、data-id属性からidを特定してfilterメソッドを用いてクリックされたTodoのidが合致しない要素だけを残すことで除去している
   - ソート
     - Stateの値をソートする場合には直接更新できないため、`[...todo]`で複製した上でsortを行う
+- react-hook-form
+  - stateを初期化するためにuseStateを用いたように、react-hook-formではuseForm関数でフォームを初期化する
+  - registerは指定されたフィールドに対応するイベントハンドラー、参照などを登録するための関数
+    - `register(name, {options})`
+  - errorsオブジェクトでは検証の成否を参照することができる
+    - `errors.フィールド名?.message`
+  - サブミット時に呼び出す処理は`handleSubmit`関数
+    - `handleSubmit(onsubmit, onerror)`
+      - `onsubmit`ではdataとeを引数として受け取る
+      - `onerror`ではerrorとeを引数として受け取る
+  - validateオプションを使うことで独自の検証ルールを適用可能
+    - `検証名: 検証ルール`の形式で表し、引数は入力値（`value`）とフォーム全体の入力値（`formValues`）
+    - `formValues`に関しては複数項目にまたがるもの（メールアドレスとメールアドレス確認用を検証したい場合など）の場合に使用する
+      - `formValues.フィールド名`でアクセスできる
+    - `validate: (value) => {}`
+  - `isDirty`を使用することでフォームが変更されていないという検証を行える
+  - `isValid`は検証に失敗しているかどうかを検知できる
+  - `isSubmitting`はフォームを処理している間はtrueになるため、それによってボタンを制御することもできる
