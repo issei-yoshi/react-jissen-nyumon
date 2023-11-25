@@ -13,6 +13,7 @@ import LazyBasic from './basicComponent/LazyBasic';
 import ProfilerBasic from './basicComponent/ProfilerBasic';
 import ErrorRoot from './basicComponent/ErrorRoot';
 import ErrorRetryRoot from './basicComponent/ErrorRetryRoot';
+import MaterialBasic from './usefulLibrary/MaterialBasic';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -27,7 +28,8 @@ root.render(
     {/* <LazyBasic /> */}
     {/* <ProfilerBasic /> */}
     {/* <ErrorRoot /> */}
-    <ErrorRetryRoot />
+    {/* <ErrorRetryRoot /> */}
+    <MaterialBasic />
   </React.StrictMode>
 );
 
