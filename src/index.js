@@ -38,6 +38,8 @@ import HookReducerInit from './utilizeHooks/HookReducerInit';
 import HookContext from './utilizeHooks/HookContext';
 import MyThemeProvider from './utilizeHooks/MyThemeProvider';
 import HookThemeButton from './utilizeHooks/HookThemeButton';
+import RecoilCounter from './utilizeHooks/RecoilCounter';
+import { RecoilRoot } from 'recoil';
 
 // const cli = new QueryClient();
 
@@ -93,9 +95,12 @@ root.render(
     {/* <HookReducerUp init={0} /> */}
     {/* <HookReducerInit init={0} /> */}
     {/* <HookContext /> */}
-    <MyThemeProvider>
+    {/* <MyThemeProvider>
       <HookThemeButton />
-    </MyThemeProvider>
+    </MyThemeProvider> */}
+    <RecoilRoot>
+      <RecoilCounter />
+    </RecoilRoot>
   </React.StrictMode>
 );
 
