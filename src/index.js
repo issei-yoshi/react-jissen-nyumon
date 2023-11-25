@@ -42,6 +42,7 @@ import RecoilCounter from './utilizeHooks/RecoilCounter';
 import { RecoilRoot } from 'recoil';
 import RecoilTodo from './utilizeHooks/RecoilTodo';
 import RecoilTodoUp from './utilizeHooks/RecoilTodoUp';
+import HookMemo from './utilizeHooks/HookMemo';
 
 // const cli = new QueryClient();
 
@@ -100,11 +101,12 @@ root.render(
     {/* <MyThemeProvider>
       <HookThemeButton />
     </MyThemeProvider> */}
-    <RecoilRoot>
+    {/* <RecoilRoot> */}
       {/* <RecoilCounter /> */}
       {/* <RecoilTodo /> */}
-      <RecoilTodoUp />
-    </RecoilRoot>
+      {/* <RecoilTodoUp /> */}
+    {/* </RecoilRoot> */}
+    <HookMemo />
   </React.StrictMode>
 );
 
