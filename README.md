@@ -144,3 +144,4 @@
       - query: クエリ関数
       - opts: 動作オプション
   - useQuery関数の戻り値は決まっており、data/isLoading/isErrorなどを全て内部的に管理してくれるのでそのプロパティを使えばstateで管理する必要がなくなる
+  - React Queryでは標準でSuspenseモードを用意しているため、QueryClientオブジェクトでoptionsを設定すればSuspenseモードが有効になる

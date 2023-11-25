@@ -23,8 +23,19 @@ import FormMui from './usefulLibrary/FormMui';
 import QueryPre from './usefulLibrary/QueryPre';
 import { Query, QueryClient, QueryClientProvider } from 'react-query';
 import QueryBasic from './usefulLibrary/QueryBasic';
+import { Suspense } from 'react';
+import { ErrorBoundary } from 'react-error-boundary';
+import QuerySuspense from './usefulLibrary/QuerySuspense';
 
-const cli = new QueryClient();
+// const cli = new QueryClient();
+
+const cli = new QueryClient({
+  defaultOptions: {
+    queries: {
+      suspense: true
+    },
+  },
+});
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -50,9 +61,16 @@ root.render(
     {/* <MaterialMode /> */}
     {/* <FormMui /> */}
     {/* <QueryPre /> */}
-    <QueryClientProvider client={cli}>
+    {/* <QueryClientProvider client={cli}>
       <QueryBasic />
-    </QueryClientProvider>
+    </QueryClientProvider> */}
+    <Suspense fallback={<p>Loading...</p>}>
+      <ErrorBoundary fallback={<div>エラーが発生しました。</div>}>
+        <QueryClientProvider client={cli}>
+          <QuerySuspense />
+        </QueryClientProvider>
+      </ErrorBoundary>
+    </Suspense>
   </React.StrictMode>
 );
 
