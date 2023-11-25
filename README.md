@@ -166,4 +166,12 @@
   - Reducerであることの条件
     - 引数として現在のstateとactionを受け取る
     - 戻り値として更新したstateを返す
-  
+- useContext
+  - バケツリレーを解消するための仕組みがコンテキスト、しかしコンポーネントの再利用性を損なうことにもなるので注意
+  - 値を共有すべき最上位のコンポーネントにてコンテキストを準備
+    - `export const MyAppContext = createContext();`で以下のContextオブジェクトを作成する
+      - コンテキストに値を渡すContext.Providerコンポーネント
+      - コンテキストの変更を受け取るContext.Consumerコンポーネント
+  - `<MyAppContext.Provider />`要素がコンテキストに具体的な値を引き渡す役割を果たす
+    - `<MyAppContext.Provider value={hoge}>`で配下のコンポーネントからコンテキスト値にアクセスできる
+  - 子コンポーネントからは`useContext(MyAppContext)`で登録されたコンテキストを参照できる

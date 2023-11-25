@@ -35,6 +35,9 @@ import HookRefForward from './utilizeHooks/HookRefForward';
 import HookReducer from './utilizeHooks/HookReducer';
 import HookReducerUp from './utilizeHooks/HookReducerUp';
 import HookReducerInit from './utilizeHooks/HookReducerInit';
+import HookContext from './utilizeHooks/HookContext';
+import MyThemeProvider from './utilizeHooks/MyThemeProvider';
+import HookThemeButton from './utilizeHooks/HookThemeButton';
 
 // const cli = new QueryClient();
 
@@ -88,7 +91,11 @@ root.render(
     {/* <HookRefForward /> */}
     {/* <HookReducer init={0} /> */}
     {/* <HookReducerUp init={0} /> */}
-    <HookReducerInit init={0} />
+    {/* <HookReducerInit init={0} /> */}
+    {/* <HookContext /> */}
+    <MyThemeProvider>
+      <HookThemeButton />
+    </MyThemeProvider>
   </React.StrictMode>
 );
 
