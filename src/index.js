@@ -21,6 +21,10 @@ import theme from './usefulLibrary/theme';
 import MaterialMode from './usefulLibrary/MaterialMode';
 import FormMui from './usefulLibrary/FormMui';
 import QueryPre from './usefulLibrary/QueryPre';
+import { Query, QueryClient, QueryClientProvider } from 'react-query';
+import QueryBasic from './usefulLibrary/QueryBasic';
+
+const cli = new QueryClient();
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -45,7 +49,10 @@ root.render(
     </ThemeProvider> */}
     {/* <MaterialMode /> */}
     {/* <FormMui /> */}
-    <QueryPre />
+    {/* <QueryPre /> */}
+    <QueryClientProvider client={cli}>
+      <QueryBasic />
+    </QueryClientProvider>
   </React.StrictMode>
 );
 

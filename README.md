@@ -134,3 +134,13 @@
 - mui
   - アルファベットは全て大文字になるがこれはデフォルトの挙動
   - `useMediaQuery`は渡されたメディアクエリとの一致を判定してその結果をbooleanで返す
+- React Query
+  - 呼び出し側で利用準備をする必要がある
+    - QueryClientを初期化`const cli = QueryClient()`
+    - QueryClientProviderに渡す`<QueryClientProvider client={cli}>`
+  - クエリを発行するのはuseQuery関数
+    - `useQuery(key, query [,opts])`
+      - key: クエリキー
+      - query: クエリ関数
+      - opts: 動作オプション
+  - useQuery関数の戻り値は決まっており、data/isLoading/isErrorなどを全て内部的に管理してくれるのでそのプロパティを使えばstateで管理する必要がなくなる
