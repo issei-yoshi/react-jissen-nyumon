@@ -43,6 +43,7 @@ import { RecoilRoot } from 'recoil';
 import RecoilTodo from './utilizeHooks/RecoilTodo';
 import RecoilTodoUp from './utilizeHooks/RecoilTodoUp';
 import HookMemo from './utilizeHooks/HookMemo';
+import HookTransition from './utilizeHooks/HookTransition';
 
 // const cli = new QueryClient();
 
@@ -106,7 +107,8 @@ root.render(
       {/* <RecoilTodo /> */}
       {/* <RecoilTodoUp /> */}
     {/* </RecoilRoot> */}
-    <HookMemo />
+    {/* <HookMemo /> */}
+    <HookTransition />
   </React.StrictMode>
 );
 

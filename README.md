@@ -189,3 +189,11 @@
     - 親コンポーネントが再描画されると関数も再生成されてしまう
     - useCallbackで関数を囲むことで再生成されることを防ぐことができる
     - memoと併用して使用しないと意味がない
+- useTransition
+  - 特定のstateの更新をトランジションとしてマークしておくことで優先度の高い更新を先に反映して、優先度の低い更新を後回しにすることが可能
+  - トランジションを利用するための準備
+    - `const [isPending, startTransition] = useTransition();`
+  - トランジションの配下でstateを更新
+    - `startTransition(() => { setComments(commentList.filter(c => c.isbn === isbn));});`
+  - 優先度の低い更新をこの中に入れる
+  - `isPending`はトランジションの反映が保留になっているかを返すbooleanのため、その値に応じてローディングを表示できる
