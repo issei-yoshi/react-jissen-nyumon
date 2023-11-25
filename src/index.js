@@ -14,6 +14,7 @@ import ProfilerBasic from './basicComponent/ProfilerBasic';
 import ErrorRoot from './basicComponent/ErrorRoot';
 import ErrorRetryRoot from './basicComponent/ErrorRetryRoot';
 import MaterialBasic from './usefulLibrary/MaterialBasic';
+import MaterialDrawer from './usefulLibrary/MaterialDrawer';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -29,7 +30,8 @@ root.render(
     {/* <ProfilerBasic /> */}
     {/* <ErrorRoot /> */}
     {/* <ErrorRetryRoot /> */}
-    <MaterialBasic />
+    {/* <MaterialBasic /> */}
+    <MaterialDrawer />
   </React.StrictMode>
 );
 
