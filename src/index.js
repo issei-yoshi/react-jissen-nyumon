@@ -9,6 +9,7 @@ import StateNest from './basicForm/StateNest';
 import StateNestImmer from './basicForm/StateNestImmer';
 import StateTodo from './basicForm/StateTodo';
 import FormBasic from './basicForm/FromBasic';
+import LazyBasic from './basicComponent/LazyBasic';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -19,7 +20,8 @@ root.render(
     {/* <StateNest /> */}
     {/* <StateNestImmer /> */}
     {/* <StateTodo /> */}
-    <FormBasic />
+    {/* <FormBasic /> */}
+    <LazyBasic />
   </React.StrictMode>
 );
 
