@@ -26,16 +26,19 @@ import QueryBasic from './usefulLibrary/QueryBasic';
 import { Suspense } from 'react';
 import { ErrorBoundary } from 'react-error-boundary';
 import QuerySuspense from './usefulLibrary/QuerySuspense';
+import StateEffect from './utilizeHooks/StateEffect';
+import HookTimer from './utilizeHooks/HookTimer';
+import HookEffect from './utilizeHooks/HookEffect';
 
 // const cli = new QueryClient();
 
-const cli = new QueryClient({
-  defaultOptions: {
-    queries: {
-      suspense: true
-    },
-  },
-});
+// const cli = new QueryClient({
+//   defaultOptions: {
+//     queries: {
+//       suspense: true
+//     },
+//   },
+// });
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -64,13 +67,16 @@ root.render(
     {/* <QueryClientProvider client={cli}>
       <QueryBasic />
     </QueryClientProvider> */}
-    <Suspense fallback={<p>Loading...</p>}>
+    {/* <Suspense fallback={<p>Loading...</p>}>
       <ErrorBoundary fallback={<div>エラーが発生しました。</div>}>
         <QueryClientProvider client={cli}>
           <QuerySuspense />
         </QueryClientProvider>
       </ErrorBoundary>
-    </Suspense>
+    </Suspense> */}
+    {/* <StateEffect init={0} /> */}
+    {/* <HookTimer init={10} /> */}
+    <HookEffect init={10} />
   </React.StrictMode>
 );
 
