@@ -15,6 +15,7 @@ import ErrorRoot from './basicComponent/ErrorRoot';
 import ErrorRetryRoot from './basicComponent/ErrorRetryRoot';
 import MaterialBasic from './usefulLibrary/MaterialBasic';
 import MaterialDrawer from './usefulLibrary/MaterialDrawer';
+import MaterialGrid from './usefulLibrary/MaterialGrid';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -31,7 +32,8 @@ root.render(
     {/* <ErrorRoot /> */}
     {/* <ErrorRetryRoot /> */}
     {/* <MaterialBasic /> */}
-    <MaterialDrawer />
+    {/* <MaterialDrawer /> */}
+    <MaterialGrid />
   </React.StrictMode>
 );
 
