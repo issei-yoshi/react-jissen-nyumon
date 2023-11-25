@@ -11,6 +11,8 @@ import StateTodo from './basicForm/StateTodo';
 import FormBasic from './basicForm/FromBasic';
 import LazyBasic from './basicComponent/LazyBasic';
 import ProfilerBasic from './basicComponent/ProfilerBasic';
+import ErrorRoot from './basicComponent/ErrorRoot';
+import ErrorRetryRoot from './basicComponent/ErrorRetryRoot';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -23,7 +25,9 @@ root.render(
     {/* <StateTodo /> */}
     {/* <FormBasic /> */}
     {/* <LazyBasic /> */}
-    <ProfilerBasic />
+    {/* <ProfilerBasic /> */}
+    {/* <ErrorRoot /> */}
+    <ErrorRetryRoot />
   </React.StrictMode>
 );
 

@@ -127,3 +127,7 @@
     - id: Profilerを識別するid
     - handleRender: 配下のコンポーネントが描画される際に実行するコールバック
     - contents: パフォーマンスを計測する対象
+- Error Boundary
+  - エラーが起きた場合には発生したエラーを記録して代わりのUIを表示するのがError Boundaryの役割
+  - Reactコンポーネントの一種
+  - クラスコンポーネントを利用しなければならないが、react-error-boundaryというライブラリを使うと簡単に導入できる
