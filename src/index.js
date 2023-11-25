@@ -20,6 +20,7 @@ import { CssBaseline, ThemeProvider } from '@mui/material';
 import theme from './usefulLibrary/theme';
 import MaterialMode from './usefulLibrary/MaterialMode';
 import FormMui from './usefulLibrary/FormMui';
+import QueryPre from './usefulLibrary/QueryPre';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -43,7 +44,8 @@ root.render(
       <MaterialBasic />
     </ThemeProvider> */}
     {/* <MaterialMode /> */}
-    <FormMui />
+    {/* <FormMui /> */}
+    <QueryPre />
   </React.StrictMode>
 );
 
