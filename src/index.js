@@ -32,6 +32,9 @@ import HookEffect from './utilizeHooks/HookEffect';
 import HookRefNg from './utilizeHooks/HookRefNg';
 import HookRef from './utilizeHooks/HookRef';
 import HookRefForward from './utilizeHooks/HookRefForward';
+import HookReducer from './utilizeHooks/HookReducer';
+import HookReducerUp from './utilizeHooks/HookReducerUp';
+import HookReducerInit from './utilizeHooks/HookReducerInit';
 
 // const cli = new QueryClient();
 
@@ -82,7 +85,10 @@ root.render(
     {/* <HookEffect init={10} /> */}
     {/* <HookRefNg /> */}
     {/* <HookRef /> */}
-    <HookRefForward />
+    {/* <HookRefForward /> */}
+    {/* <HookReducer init={0} /> */}
+    {/* <HookReducerUp init={0} /> */}
+    <HookReducerInit init={0} />
   </React.StrictMode>
 );
 
