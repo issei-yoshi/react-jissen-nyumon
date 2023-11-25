@@ -44,6 +44,8 @@ import RecoilTodo from './utilizeHooks/RecoilTodo';
 import RecoilTodoUp from './utilizeHooks/RecoilTodoUp';
 import HookMemo from './utilizeHooks/HookMemo';
 import HookTransition from './utilizeHooks/HookTransition';
+import HookDefered from './utilizeHooks/HookDeferred';
+import HookDeferredTransition from './utilizeHooks/HookDeferredTransition';
 
 // const cli = new QueryClient();
 
@@ -108,7 +110,9 @@ root.render(
       {/* <RecoilTodoUp /> */}
     {/* </RecoilRoot> */}
     {/* <HookMemo /> */}
-    <HookTransition />
+    {/* <HookTransition /> */}
+    {/* <HookDefered /> */}
+    <HookDeferredTransition />
   </React.StrictMode>
 );
 
