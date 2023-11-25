@@ -16,6 +16,8 @@ import ErrorRetryRoot from './basicComponent/ErrorRetryRoot';
 import MaterialBasic from './usefulLibrary/MaterialBasic';
 import MaterialDrawer from './usefulLibrary/MaterialDrawer';
 import MaterialGrid from './usefulLibrary/MaterialGrid';
+import { CssBaseline, ThemeProvider } from '@mui/material';
+import theme from './usefulLibrary/theme';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -33,7 +35,11 @@ root.render(
     {/* <ErrorRetryRoot /> */}
     {/* <MaterialBasic /> */}
     {/* <MaterialDrawer /> */}
-    <MaterialGrid />
+    {/* <MaterialGrid /> */}
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <MaterialBasic />
+    </ThemeProvider>
   </React.StrictMode>
 );
 
