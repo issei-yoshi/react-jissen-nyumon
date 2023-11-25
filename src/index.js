@@ -46,6 +46,7 @@ import HookMemo from './utilizeHooks/HookMemo';
 import HookTransition from './utilizeHooks/HookTransition';
 import HookDefered from './utilizeHooks/HookDeferred';
 import HookDeferredTransition from './utilizeHooks/HookDeferredTransition';
+import HookCustom from './utilizeHooks/HookCustom';
 
 // const cli = new QueryClient();
 
@@ -112,7 +113,8 @@ root.render(
     {/* <HookMemo /> */}
     {/* <HookTransition /> */}
     {/* <HookDefered /> */}
-    <HookDeferredTransition />
+    {/* <HookDeferredTransition /> */}
+    <HookCustom />
   </React.StrictMode>
 );
 

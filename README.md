@@ -197,3 +197,10 @@
     - `startTransition(() => { setComments(commentList.filter(c => c.isbn === isbn));});`
   - 優先度の低い更新をこの中に入れる
   - `isPending`はトランジションの反映が保留になっているかを返すbooleanのため、その値に応じてローディングを表示できる
+- カスタムhook
+  - 関数名がuseXxxxである
+  - 関数名で他のhooksを利用していること
+  - コンポーネントで再利用したい値やコードを戻り値として返すこと
+- useDebugValue
+  - カスタムフック内の値を監視してReact Developer Toolsに出力できる
+  - `useDebugValue(state.count >= 10 ? '10 Over' : '10 Less');`
