@@ -29,6 +29,9 @@ import QuerySuspense from './usefulLibrary/QuerySuspense';
 import StateEffect from './utilizeHooks/StateEffect';
 import HookTimer from './utilizeHooks/HookTimer';
 import HookEffect from './utilizeHooks/HookEffect';
+import HookRefNg from './utilizeHooks/HookRefNg';
+import HookRef from './utilizeHooks/HookRef';
+import HookRefForward from './utilizeHooks/HookRefForward';
 
 // const cli = new QueryClient();
 
@@ -76,7 +79,10 @@ root.render(
     </Suspense> */}
     {/* <StateEffect init={0} /> */}
     {/* <HookTimer init={10} /> */}
-    <HookEffect init={10} />
+    {/* <HookEffect init={10} /> */}
+    {/* <HookRefNg /> */}
+    {/* <HookRef /> */}
+    <HookRefForward />
   </React.StrictMode>
 );
 
