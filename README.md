@@ -121,3 +121,9 @@
   - Promiseは非同期処理の状態を管理するためのオブジェクト
     - Promiseオブジェクトが生成された直後はPending
     - 非同期処理が終了することで、成功したらFulfilled、失敗したらRejectedという状態に変化する
+- Profiler
+  - プログラム実行時の各種情報を収集・解析するツールのこと
+  - `<Profiler id="id" onRender={handleRender}>`
+    - id: Profilerを識別するid
+    - handleRender: 配下のコンポーネントが描画される際に実行するコールバック
+    - contents: パフォーマンスを計測する対象

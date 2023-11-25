@@ -10,6 +10,7 @@ import StateNestImmer from './basicForm/StateNestImmer';
 import StateTodo from './basicForm/StateTodo';
 import FormBasic from './basicForm/FromBasic';
 import LazyBasic from './basicComponent/LazyBasic';
+import ProfilerBasic from './basicComponent/ProfilerBasic';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -21,7 +22,8 @@ root.render(
     {/* <StateNestImmer /> */}
     {/* <StateTodo /> */}
     {/* <FormBasic /> */}
-    <LazyBasic />
+    {/* <LazyBasic /> */}
+    <ProfilerBasic />
   </React.StrictMode>
 );
 
