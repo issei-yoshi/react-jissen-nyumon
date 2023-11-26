@@ -1,4 +1,4 @@
-// import { Helmet } from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async';
 import { useMatches } from 'react-router-dom';
 
 export default function MyHeader(props) {
@@ -11,11 +11,10 @@ export default function MyHeader(props) {
   keywords = keywords.replace('%s', props.keywords);
   description = description.replace('%s', props.description);
   return (
-    // <Helmet>
-    //   <title>{title}</title>
-    //   <meta name="keywords" content={keywords} />
-    //   <meta name="description" content={description} />
-    // </Helmet>
-    <></>
+    <Helmet>
+      <title>{title}</title>
+      <meta name="keywords" content={keywords} />
+      <meta name="description" content={description} />
+    </Helmet>
   );
 }

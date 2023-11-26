@@ -51,6 +51,8 @@ import { Router, RouterProvider } from 'react-router-dom';
 import routesBasic from './routing/routesBasic';
 import routesLink from './routing/routesLink';
 import routesParam from './routing/routesParam';
+import { HelmetProvider } from 'react-helmet-async';
+import routesHandle from './routing/routesHandle';
 
 // const cli = new QueryClient();
 
@@ -120,7 +122,10 @@ root.render(
     {/* <HookDeferredTransition /> */}
     {/* <HookCustom /> */}
     {/* <RouterProvider router={routesLink} /> */}
-    <RouterProvider router={routesParam} />
+    {/* <RouterProvider router={routesParam} /> */}
+    <HelmetProvider>
+      <RouterProvider router={routesHandle} />
+    </HelmetProvider>
   </React.StrictMode>
 );
 
