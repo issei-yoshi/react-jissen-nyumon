@@ -239,4 +239,7 @@
     - テスト実行は`npm run test`
     - テストのカバレッジ分析をしたい場合は`npm run test -- --coverage --watchAll=false`
       - より詳細な確認をしたい場合は`/coverage/lcov-report/index.html`を開く
-    - 
+    - コンポーネントのテストは以下手順が良い
+      - コンポーネントを描画
+      - 目的の要素を取得・操作
+      - 描画・操作結果をMatcherで確認
