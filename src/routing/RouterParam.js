@@ -4,10 +4,10 @@ import './RouterNav.css';
 
 export default function RouterParam() {
   const navigation = useNavigation();
-  const [count, setCount] = useState(0);
+  // const [count, setCount] = useState(0);
   return (
     <>
-      <p>アクセス数：{count}</p>
+      {/* <p>アクセス数：{count}</p> */}
       <ul>
         <li><NavLink to="/">トップ</NavLink></li>
         <li><NavLink to="/book/form">書籍登録フォーム</NavLink></li>
@@ -26,13 +26,13 @@ export default function RouterParam() {
         <li><NavLink to="/nothing/foo/bar">存在しないページ</NavLink></li>
       </ul>
       <hr />
-      {/* <Outlet /> */}
+      <Outlet />
       {/* <Outlet context={[count, setCount]} /> */}
-      {
+      {/* {
         navigation.state === 'loading' ?
           <p>Loading...</p> :
           <Outlet />
-      }
+      } */}
     </>
   );
 }

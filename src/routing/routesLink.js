@@ -3,7 +3,7 @@ import RouterApp from './RouterApp';
 import TopPage from './TopPage';
 import ArticlePage from './ArticlePage';
 import AboutPage from './AboutPage';
-// import InfoPage from './InfoPage';
+import InfoPage from './InfoPage';
 import RouterNav from './RouterNav';
 
 // const routesLink = createBrowserRouter(
@@ -30,12 +30,12 @@ import RouterNav from './RouterNav';
 const routesLink = createBrowserRouter(
   createRoutesFromElements(
     <Route
-      // element={<RouterApp />}
-      element={<RouterNav />}
+      element={<RouterApp />}
+      // element={<RouterNav />}
     >
       <Route path="/" element={<TopPage />} />
       <Route path="/article" element={<ArticlePage />} />
-      {/* <Route path="/article/info" element={<InfoPage />} /> */}
+      <Route path="/article/info" element={<InfoPage />} />
       <Route path="/about" element={<AboutPage />} />
     </Route>
   )
