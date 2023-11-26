@@ -204,3 +204,11 @@
 - useDebugValue
   - カスタムフック内の値を監視してReact Developer Toolsに出力できる
   - `useDebugValue(state.count >= 10 ? '10 Over' : '10 Less');`
+- ルーティング
+  - アプリにルーター機能を付与するのは`RouterProvider`コンポーネントの役割
+    - このrouter属性に対してルート情報を渡す
+  - `createBrowserRouter(routes, options)`関数でルーティング情報を定義する
+    - pathやelementを使う
+    - オブジェクト形式で書くこともできるしタグ形式で表現することも可能
+      - タグ形式の場合は`createRoutesFromElements`関数でオブジェクト配列に変換してから`createBrowserRouter`関数に渡す
+  - `Outlet`はあらかじめ用意しておいたリンク先が表示されるようにするものなので実質必須

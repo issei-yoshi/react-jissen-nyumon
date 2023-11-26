@@ -47,6 +47,9 @@ import HookTransition from './utilizeHooks/HookTransition';
 import HookDefered from './utilizeHooks/HookDeferred';
 import HookDeferredTransition from './utilizeHooks/HookDeferredTransition';
 import HookCustom from './utilizeHooks/HookCustom';
+import { Router, RouterProvider } from 'react-router-dom';
+import routesBasic from './routing/routesBasic';
+import routesLink from './routing/routesLink';
 
 // const cli = new QueryClient();
 
@@ -114,7 +117,8 @@ root.render(
     {/* <HookTransition /> */}
     {/* <HookDefered /> */}
     {/* <HookDeferredTransition /> */}
-    <HookCustom />
+    {/* <HookCustom /> */}
+    <RouterProvider router={routesLink} />
   </React.StrictMode>
 );
 
